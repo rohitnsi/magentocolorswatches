@@ -2,8 +2,8 @@
 $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 $childIds = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($_product->getId());
-//echo "<pre>";
-//print_r($childIds);
+echo "<pre>";
+print_r($childIds);
 
 $product = Mage::getModel('catalog/product')->load($_product->getId());
 
