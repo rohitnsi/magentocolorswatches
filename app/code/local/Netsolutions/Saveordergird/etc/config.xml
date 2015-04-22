@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Netsolutions_Saveordergird>
+      <version>0.1.0</version>
+    </Netsolutions_Saveordergird>
+  </modules>
+  <global>
+    <helpers>
+      <saveordergird>
+        <class>Netsolutions_Saveordergird_Helper</class>
+      </saveordergird>
+    </helpers>
+	<models>
+	  <saveordergird>
+		<class>Netsolutions_Saveordergird_Model</class>
+		<resourceModel>saveordergird_mysql4</resourceModel>
+	  </saveordergird>
+	</models>
+    <events>
+	  <sales_order_place_after> <!-- identifier of the event we want to catch -->
+        <observers>
+          <sales_order_place_after_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>saveordergird/observer</class> <!-- observers class alias -->
+            <method>Observer</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </sales_order_place_after_handler>
+        </observers>
+      </sales_order_place_after>
+    </events>
+  </global>
+</config> 

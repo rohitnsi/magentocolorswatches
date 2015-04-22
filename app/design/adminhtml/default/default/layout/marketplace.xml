@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <marketplace_adminhtml_marketplace_index>
+	<reference name="content">
+	  <block type="marketplace/adminhtml_marketplace" name="marketplace" />
+	</reference>
+  </marketplace_adminhtml_marketplace_index>
+</layout>

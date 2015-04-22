@@ -1,0 +1,76 @@
+<?php
+$_product    = $this->getProduct();
+$_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
+$childIds = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($_product->getId());
+//echo "<pre>";
+//print_r($childIds);
+
+$product = Mage::getModel('catalog/product')->load($_product->getId());
+
+// get simple produts' ids
+$childIds = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($product->getId());
+
+// get simple products
+$childProducts = Mage::getModel('catalog/product_type_configurable')
+                        ->getUsedProducts(null,$product);
+
+// get configurable options
+$productAttributeOptions = $product->getTypeInstance(true)->getConfigurableAttributesAsArray($product);
+$attributeOptions = array();
+foreach ($productAttributeOptions as $productAttribute) {
+    foreach ($productAttribute['values'] as $attribute) {
+        $attributeOptions[$productAttribute['label']][$attribute['value_index']] = $attribute['store_label'];
+    }
+}
+ ?>
+<?php if ($_product->isSaleable() && count($_attributes)):?>
+    <dl>
+    <?php foreach($_attributes as $_attribute): ?>
+        <dt><label class="required"><em>*</em><?php echo $_attribute->getLabel() ?></label></dt>
+        <dd<?php if ($_attribute->decoratedIsLast){?> class="last"<?php }?>>
+<script>
+jQuery( document ).ready(function() {
+jQuery( "#swatchimage img" ).click(function() {
+
+jQuery ('#swatchimage img').css("border","none");
+
+var optionid = jQuery(this).attr("id");
+
+var attributeid = <?php echo $_attribute->getAttributeId(); ?>
+
+jQuery ('#attribute'+attributeid).val(optionid);
+
+jQuery ('#'+optionid).css("border","2px solid blue");
+
+});
+});
+</script>      
+<?php
+			$productModel = Mage::getModel('catalog/product');
+			$attr = $productModel->getResource()->getAttribute($_attribute->getAttributeId());
+			$array = (array) $attr->getSource();
+			
+$attributeOptions = $attr ->getSource()->getAllOptions();
+foreach ($attributeOptions as $option) {
+   // echo $option['value'];
+    $image = $attr->getSource()->getOptionImage($option['value']);
+    if ($image != ''){
+		
+	echo '<div id="swatchimage"><img height="25" width="25" src='.Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'swatches/'.$image.' id='.$option['value'].'></div>';
+}
+}
+		//	echo '<pre>'; print_r($attr);
+
+			?>
+            <div class="input-box" style="display:none">
+                <select name="super_attribute[<?php echo $_attribute->getAttributeId() ?>]" id="attribute<?php echo $_attribute->getAttributeId() ?>" class="required-entry super-attribute-select">
+                    <option><?php echo $this->__('Choose an Option...') ?></option>
+                  </select>
+              </div>
+        </dd>
+    <?php endforeach; ?>
+    </dl>
+    <script type="text/javascript">
+        var spConfig = new Product.Config(<?php echo $this->getJsonConfig() ?>);
+    </script>
+<?php endif;?>

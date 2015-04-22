@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Netsolutions_Productxml>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </Netsolutions_Productxml>
+  </modules>
+</config>

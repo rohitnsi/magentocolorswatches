@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Netsol_Custommenu>
+      <version>0.1.0</version>
+    </Netsol_Custommenu>
+  </modules>
+  <global>
+    <helpers>
+      <custommenu>
+        <class>Netsol_Custommenu_Helper</class>
+      </custommenu>
+    </helpers>
+  </global>
+  <frontend>
+        <events>
+            <page_block_html_topmenu_gethtml_before>
+                <observers>
+                    <netsol_custommenu>
+                        <class>netsol_custommenu/observer</class>
+                        <method>addToTopmenu</method>
+                    </netsol_custommenu>
+                </observers>
+            </page_block_html_topmenu_gethtml_before>
+        </events>
+   </frontend>
+</config> 

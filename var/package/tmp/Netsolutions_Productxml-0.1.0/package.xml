@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Netsolutions_Productxml</name>
+    <version>0.1.0</version>
+    <stability>devel</stability>
+    <license>OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Create Product Data in XML format</summary>
+    <description>Create Product Data in XML format</description>
+    <notes>Create Product Data in XML format</notes>
+    <authors><author><name>Rohit Dhiman</name><user>rohitjesus</user><email>rohit.dhiman@netsolutions.in</email></author></authors>
+    <date>2015-03-30</date>
+    <time>06:03:17</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Netsolutions_Productxml.xml" hash="2bd5aa2952b72a4c47dc3f164eacf461"/></dir></target><target name="magelocal"><dir name="Netsolutions"><dir name="Productxml"><dir name="Block"><dir name="Adminhtml"><file name="Productxmlbackend.php" hash="afb9a7cde1f715fab21e3df226240431"/></dir><file name="Button.php" hash="0eec93df00b679ea2252ba11386cb3f1"/></dir><dir name="Helper"><file name="Data.php" hash="69182a028a05189f1688d5069627b6df"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="ProductxmlbackendController.php" hash="5714264880b3bb191eba9e4bb5c6fc02"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="9a03aca336ba037aee1fbebc21e8919a"/><file name="config.xml" hash="ea222716305effaca21eebd6832a529d"/><file name="system.xml" hash="8c2cc132decc6823ed79afe917e885a6"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

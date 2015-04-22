@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<configurable>
+  <product>
+    <name>Funny Bear Tshirt</name>
+    <product_id>2</product_id>
+    <url_path>funny-bear-tshirt</url_path>
+    <sku>Fb</sku>
+    <child_product_ids>3,4,5</child_product_ids>
+    <childproduct>
+      <id>3</id>
+      <name>Funny Bear Tshirt-Small</name>
+      <price>10.0000</price>
+      <sku>Fb-Small</sku>
+      <stock>1000</stock>
+    </childproduct>
+    <childproduct>
+      <id>4</id>
+      <name>Funny Bear Tshirt-Medium</name>
+      <price>25.0000</price>
+      <sku>Fb-Medium</sku>
+      <stock>1000</stock>
+    </childproduct>
+    <childproduct>
+      <id>5</id>
+      <name>Funny Bear Tshirt-Large</name>
+      <price>30.0000</price>
+      <sku>Fb-Large</sku>
+      <stock>1000</stock>
+    </childproduct>
+  </product>
+  <product>
+    <name>Track Suit</name>
+    <product_id>6</product_id>
+    <url_path>track-suit</url_path>
+    <sku>track</sku>
+    <child_product_ids>7,8,9</child_product_ids>
+    <childproduct>
+      <id>7</id>
+      <name>Track Suit-Small</name>
+      <price>75.0000</price>
+      <sku>track-Small</sku>
+      <stock>998</stock>
+    </childproduct>
+    <childproduct>
+      <id>8</id>
+      <name>Track Suit-Medium</name>
+      <price>90.0000</price>
+      <sku>track-Medium</sku>
+      <stock>1000</stock>
+    </childproduct>
+    <childproduct>
+      <id>9</id>
+      <name>Track Suit-Large</name>
+      <price>95.0000</price>
+      <sku>track-Large</sku>
+      <stock>50</stock>
+    </childproduct>
+  </product>
+  <product>
+    <name>Gym Sipper</name>
+    <product_id>11</product_id>
+    <url_path>gym-sipper</url_path>
+    <sku>gymsipper1123</sku>
+    <child_product_ids>12,13,14,15</child_product_ids>
+    <childproduct>
+      <id>12</id>
+      <name>Gym Sipper-Black</name>
+      <price>30.0000</price>
+      <sku>gymsipper1123-Black</sku>
+      <stock>20</stock>
+    </childproduct>
+    <childproduct>
+      <id>13</id>
+      <name>Gym Sipper-Green</name>
+      <price>45.0000</price>
+      <sku>gymsipper1123-Green</sku>
+      <stock>20</stock>
+    </childproduct>
+    <childproduct>
+      <id>14</id>
+      <name>Gym Sipper-Red</name>
+      <price>50.0000</price>
+      <sku>gymsipper1123-Red</sku>
+      <stock>20</stock>
+    </childproduct>
+    <childproduct>
+      <id>15</id>
+      <name>Gym Sipper-Yellow</name>
+      <price>55.0000</price>
+      <sku>gymsipper1123-Yellow</sku>
+      <stock>20</stock>
+    </childproduct>
+  </product>
+</configurable>

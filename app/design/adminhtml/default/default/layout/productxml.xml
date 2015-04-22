@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <productxml_adminhtml_productxmlbackend_index>
+	<reference name="content">
+	  <block type="productxml/adminhtml_productxmlbackend" name="productxmlbackend" template="productxml/productxmlbackend.phtml"/>
+	</reference>
+  </productxml_adminhtml_productxmlbackend_index>
+</layout>

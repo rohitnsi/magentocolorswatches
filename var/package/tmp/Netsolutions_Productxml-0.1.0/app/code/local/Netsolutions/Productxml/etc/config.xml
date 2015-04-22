@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Netsolutions_Productxml>
+      <version>0.1.0</version>
+    </Netsolutions_Productxml>
+  </modules>
+  <global>
+    <helpers>
+      <productxml>
+        <class>Netsolutions_Productxml_Helper</class>
+      </productxml>
+    </helpers>
+	<blocks>
+	  <productxml>
+		<class>Netsolutions_Productxml_Block</class>
+	  </productxml>
+	</blocks>
+  </global>
+  <admin>
+	<routers>
+	  <productxml>
+	    <use>admin</use>
+		<args>
+		  <module>Netsolutions_Productxml</module>
+		  <frontName>admin_productxml</frontName>
+		</args>
+	  </productxml>
+	</routers>
+  </admin>
+  <adminhtml>
+	<!--<menu>
+	  <productxml module="productxml">
+		<title>Productxml</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <productxmlbackend module="productxml">
+			<title>Backend Page Title</title>
+			<sort_order>0</sort_order>
+			<action>admin_productxml/adminhtml_productxmlbackend</action>
+		  </productxmlbackend>
+		</children>
+	  </productxml>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<productxml translate="title" module="productxml">
+			  <title>Productxml</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <productxmlbackend translate="title">
+			<title>Backend Page Title</title>
+		  </productxmlbackend>
+			  </children>
+			</productxml>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<productxml>
+		  <file>productxml.xml</file>
+		</productxml>
+	  </updates>
+	</layout>-->
+  </adminhtml>
+</config> 

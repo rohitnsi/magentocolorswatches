@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Netsolutions_Configurable>
+      <version>0.1.0</version>
+    </Netsolutions_Configurable>
+  </modules>
+  <global>
+    <helpers>
+      <configurable>
+        <class>Netsolutions_Configurable_Helper</class>
+      </configurable>
+    </helpers>
+	<blocks>
+	  <configurable>
+		<class>Netsolutions_Configurable_Block</class>
+	  </configurable>
+			<catalog>
+				<rewrite>
+					<product_view_type_configurable>Netsolutions_Configurable_Block_Catalog_Product_View_Type_Configurable</product_view_type_configurable>
+				</rewrite>
+			</catalog>
+	</blocks>
+  </global>
+      <frontend>
+        <layout>
+            <updates>
+                <configurable module="Netsolutions_Configurable">
+                    <file>configurable.xml</file>
+                </configurable>
+            </updates>
+        </layout>
+    </frontend>
+</config> 

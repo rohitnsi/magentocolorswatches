@@ -1,0 +1,86 @@
+<_>
+   <form_key>PlwlSiJpYip5Kq6U</form_key>
+   <name>Netsolutions_Productxml</name>
+   <channel>community</channel>
+   <version_ids>
+      <version_ids>2</version_ids>
+      <version_ids>1</version_ids>
+   </version_ids>
+   <summary>Create Product Data in XML format</summary>
+   <description>Create Product Data in XML format</description>
+   <license>OSL</license>
+   <license_uri/>
+   <version>0.1.0</version>
+   <stability>devel</stability>
+   <notes>Create Product Data in XML format</notes>
+   <authors>
+      <name>
+         <name>Rohit Dhiman</name>
+      </name>
+      <user>
+         <user>rohitjesus</user>
+      </user>
+      <email>
+         <email>rohit.dhiman@netsolutions.in</email>
+      </email>
+   </authors>
+   <depends_php_min>5.1.0</depends_php_min>
+   <depends_php_max>6.0.0</depends_php_max>
+   <depends>
+      <package>
+         <name>
+            <name/>
+         </name>
+         <channel>
+            <channel/>
+         </channel>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+         <files>
+            <files>        </files>
+         </files>
+      </package>
+      <extension>
+         <name>
+            <name>Core</name>
+         </name>
+         <min>
+            <min/>
+         </min>
+         <max>
+            <max/>
+         </max>
+      </extension>
+   </depends>
+   <contents>
+      <target>
+         <target>magelocal</target>
+         <target>mageetc</target>
+         <target>magelocal</target>
+      </target>
+      <path>
+         <path/>
+         <path>modules/Netsolutions_Productxml.xml</path>
+         <path>Netsolutions</path>
+      </path>
+      <type>
+         <type>file</type>
+         <type>file</type>
+         <type>dir</type>
+      </type>
+      <include>
+         <include/>
+         <include/>
+         <include/>
+      </include>
+      <ignore>
+         <ignore/>
+         <ignore/>
+         <ignore/>
+      </ignore>
+   </contents>
+</_>
