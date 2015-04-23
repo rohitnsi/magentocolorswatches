@@ -3,7 +3,7 @@ $_product    = $this->getProduct();
 $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes());
 $childIds = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($_product->getId());
 //echo "<pre>";
-print_r($childIds);
+//print_r($childIds);
 
 $product = Mage::getModel('catalog/product')->load($_product->getId());
 
@@ -31,17 +31,11 @@ foreach ($productAttributeOptions as $productAttribute) {
 <script>
 jQuery( document ).ready(function() {
 jQuery( "#swatchimage img" ).click(function() {
-
 jQuery ('#swatchimage img').css("border","none");
-
 var optionid = jQuery(this).attr("id");
-
 var attributeid = <?php echo $_attribute->getAttributeId(); ?>
-
 jQuery ('#attribute'+attributeid).val(optionid);
-
 jQuery ('#'+optionid).css("border","2px solid blue");
-
 });
 });
 </script>      
